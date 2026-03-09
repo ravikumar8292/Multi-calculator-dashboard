@@ -98,12 +98,12 @@ const categories: CalculatorCategory[] = [
 
 const Dashboard: React.FC = () => {
   const [selectedCalculator, setSelectedCalculator] = useState<CalculatorType | null>(null);
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  // const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [expandedCategories, setExpandedCategories] = useState<Set<string>>(new Set(['basic'])); // Default expand first category
 
   const handleCalculatorSelect = (calculatorId: CalculatorType, categoryId: string) => {
     setSelectedCalculator(calculatorId);
-    setSelectedCategory(categoryId);
+    // setSelectedCategory(categoryId);
   };
 
   const toggleCategory = (categoryId: string) => {

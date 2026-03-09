@@ -34,25 +34,25 @@ const DiscountCalculator: React.FC = () => {
     setSavedAmount(null);
   };
 
-  const calculateFromDiscountAmount = () => {
-    const price = parseFloat(originalPrice);
-    const discountAmt = parseFloat(discountPercentage);
+  // const calculateFromDiscountAmount = () => {
+  //   const price = parseFloat(originalPrice);
+  //   const discountAmt = parseFloat(discountPercentage);
 
-    if (isNaN(price) || isNaN(discountAmt) || price < 0 || discountAmt < 0 || discountAmt > price) {
-      setDiscountAmount(null);
-      setFinalPrice(null);
-      setSavedAmount(null);
-      return;
-    }
+  //   if (isNaN(price) || isNaN(discountAmt) || price < 0 || discountAmt < 0 || discountAmt > price) {
+  //     setDiscountAmount(null);
+  //     setFinalPrice(null);
+  //     setSavedAmount(null);
+  //     return;
+  //   }
 
-    const discountPercent = (discountAmt / price) * 100;
-    const finalAmt = price - discountAmt;
+  //   const discountPercent = (discountAmt / price) * 100;
+  //   const finalAmt = price - discountAmt;
 
-    setDiscountAmount(discountAmt);
-    setFinalPrice(finalAmt);
-    setSavedAmount(discountAmt);
-    setDiscountPercentage(discountPercent.toString());
-  };
+  //   setDiscountAmount(discountAmt);
+  //   setFinalPrice(finalAmt);
+  //   setSavedAmount(discountAmt);
+  //   setDiscountPercentage(discountPercent.toString());
+  // };
 
   return (
     <div className="max-w-md mx-auto">
